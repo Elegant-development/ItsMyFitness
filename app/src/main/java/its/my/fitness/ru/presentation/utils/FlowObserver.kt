@@ -1,4 +1,4 @@
-package its.my.fitness.ru.utils
+package its.my.fitness.ru.presentation.utils
 
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
