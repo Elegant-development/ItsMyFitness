@@ -2,6 +2,7 @@ package its.my.fitness.ru.presentation.screens.auth
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import dagger.hilt.android.AndroidEntryPoint
 import its.my.fitness.ru.R
 import its.my.fitness.ru.databinding.AuthFragmentBinding
@@ -13,8 +14,18 @@ class AuthFragment: BaseFragment<AuthViewModel, AuthFragmentBinding>(R.layout.au
     override val viewModel: AuthViewModel
         get() = TODO("Not yet implemented")
 
-    override fun initBinding(inflater: LayoutInflater, container: ViewGroup?): AuthFragmentBinding {
-        TODO("Not yet implemented")
+    override fun initBinding(
+        inflater: LayoutInflater,
+        container: ViewGroup?
+    ): AuthFragmentBinding = AuthFragmentBinding.inflate(inflater)
+
+    override fun initialize() {
+        binding.loginTxt.setOnClickListener {
+            findNavController().navigate(R.id.action_authFragment_to_registerFragment)
+        }
+        binding.loginBtn.setOnClickListener {
+            findNavController().navigate(R.id.action_authFragment_to_mainFragment)
+        }
     }
 
 }

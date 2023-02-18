@@ -2,6 +2,7 @@ package its.my.fitness.ru.presentation.screens.register
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import dagger.hilt.android.AndroidEntryPoint
 import its.my.fitness.ru.R
 import its.my.fitness.ru.databinding.RegisterFragmentBinding
@@ -16,8 +17,15 @@ class RegisterFragment: BaseFragment<RegisterViewModel, RegisterFragmentBinding>
     override fun initBinding(
         inflater: LayoutInflater,
         container: ViewGroup?
-    ): RegisterFragmentBinding {
-        TODO("Not yet implemented")
+    ): RegisterFragmentBinding = RegisterFragmentBinding.inflate(inflater)
+
+    override fun initialize() {
+        binding.loginTxt.setOnClickListener {
+            findNavController().navigate(R.id.action_registerFragment_to_authFragment)
+        }
+        binding.registerBtn.setOnClickListener {
+            findNavController().navigate(R.id.action_registerFragment_to_mainFragment)
+        }
     }
 
 }

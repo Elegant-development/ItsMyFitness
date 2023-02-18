@@ -12,6 +12,8 @@
 
     <string name="onboarding_title_text_4">Improve Sleep Quality</string>
     <string name="onboarding_description_text_4">Improve the quality of your sleep with us, good quality sleep can bring a good mood in the morning</string>
+    <string name="create_an_account">Create an Account</string>
+    <string name="hey_there">Hey there,</string>
 
 
 </resources>

@@ -35,7 +35,7 @@ class OnboardingFragment: BaseFragment<OnboardingViewModel, OnboardingFragmentBi
                     onboardingButton.setImageResource(R.drawable.onboarding_button_4)
                 }
                 if (number == 5) {
-
+                    findNavController().navigate(R.id.action_onboardingFragment_to_registerFragment)
                 }
             }
         }
