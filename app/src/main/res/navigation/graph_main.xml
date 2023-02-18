@@ -11,20 +11,11 @@
         android:label="splash_fragment"
         tools:layout="@layout/splash_fragment" >
         <action
-            android:id="@+id/action_splashFragment_to_helloFragment"
-            app:destination="@id/helloFragment" />
-        <action
             android:id="@+id/action_splashFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/helloFragment"
-        android:name="its.my.fitness.ru.presentation.screens.welcome.WelcomeFragment"
-        android:label="hello_fragment"
-        tools:layout="@layout/welcome_fragment" >
         <action
-            android:id="@+id/action_helloFragment_to_onboardingFragment"
-            app:destination="@id/onboardingFragment" />
+            android:id="@+id/action_splashFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment" />
     </fragment>
     <fragment
         android:id="@+id/mainFragment"
@@ -48,10 +39,26 @@
         <action
             android:id="@+id/action_registerFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_registerFragment_to_authFragment"
+            app:destination="@id/authFragment" />
     </fragment>
     <fragment
         android:id="@+id/onboardingFragment"
         android:name="its.my.fitness.ru.presentation.screens.onboarding.OnboardingFragment"
         android:label="onboarding_fragment"
-        tools:layout="@layout/onboarding_fragment" />
+        tools:layout="@layout/onboarding_fragment" >
+        <action
+            android:id="@+id/action_onboardingFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="its.my.fitness.ru.presentation.screens.welcome.WelcomeFragment"
+        android:label="welcome_fragment"
+        tools:layout="@layout/welcome_fragment" >
+        <action
+            android:id="@+id/action_welcomeFragment_to_onboardingFragment"
+            app:destination="@id/onboardingFragment" />
+    </fragment>
 </navigation>
