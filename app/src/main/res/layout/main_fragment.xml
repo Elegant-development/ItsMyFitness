@@ -7,5 +7,37 @@
     android:layout_height="match_parent"
     tools:context=".presentation.screens.main.MainFragment"
     >
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/first"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="0dp"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/first"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintBottom_toTopOf="@+id/third">
 
+
+       <com.google.android.material.imageview.ShapeableImageView
+           android:layout_width="match_parent"
+           android:layout_height="0dp"
+           android:src="@drawable/frame"
+
+           />
+
+   </ScrollView>
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/third"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/navbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

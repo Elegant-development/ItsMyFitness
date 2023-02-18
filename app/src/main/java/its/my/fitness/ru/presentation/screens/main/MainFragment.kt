@@ -13,8 +13,9 @@ class MainFragment: BaseFragment<MainViewModel, MainFragmentBinding>(R.layout.ma
     override val viewModel: MainViewModel
         get() = TODO("Not yet implemented")
 
-    override fun initBinding(inflater: LayoutInflater, container: ViewGroup?): MainFragmentBinding {
-        TODO("Not yet implemented")
-    }
+    override fun initBinding(
+        inflater: LayoutInflater,
+        container: ViewGroup?
+    ): MainFragmentBinding = MainFragmentBinding.inflate(inflater)
 
 }
