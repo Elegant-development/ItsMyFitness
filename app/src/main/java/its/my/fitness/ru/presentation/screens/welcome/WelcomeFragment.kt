@@ -1,22 +1,22 @@
-package its.my.fitness.ru.presentation.screens.hello
+package its.my.fitness.ru.presentation.screens.welcome
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import dagger.hilt.android.AndroidEntryPoint
 import its.my.fitness.ru.R
-import its.my.fitness.ru.databinding.WelcomFragmentBinding
+import its.my.fitness.ru.databinding.WelcomeFragmentBinding
 import its.my.fitness.ru.presentation.base.BaseFragment
 
 @AndroidEntryPoint
-class WelcomFragment: BaseFragment<WelcomViewModel, WelcomFragmentBinding>(R.layout.welcom_fragment) {
+class WelcomeFragment: BaseFragment<WelcomeViewModel, WelcomeFragmentBinding>(R.layout.welcome_fragment) {
 
-    override val viewModel: WelcomViewModel
+    override val viewModel: WelcomeViewModel
         get() = TODO("Not yet implemented")
 
     override fun initBinding(
         inflater: LayoutInflater,
         container: ViewGroup?
-    ): WelcomFragmentBinding {
+    ): WelcomeFragmentBinding {
         TODO("Not yet implemented")
     }
 
