@@ -1,4 +1,21 @@
 package its.my.fitness.ru.presentation.screens.hello
 
-class HelloFragment {
+import android.view.LayoutInflater
+import android.view.ViewGroup
+import its.my.fitness.ru.R
+import its.my.fitness.ru.databinding.HelloFragmentBinding
+import its.my.fitness.ru.presentation.base.BaseFragment
+
+class HelloFragment: BaseFragment<HelloViewModel, HelloFragmentBinding>(R.layout.hello_fragment) {
+
+    override val viewModel: HelloViewModel
+        get() = TODO("Not yet implemented")
+
+    override fun initBinding(
+        inflater: LayoutInflater,
+        container: ViewGroup?
+    ): HelloFragmentBinding {
+        TODO("Not yet implemented")
+    }
+
 }
