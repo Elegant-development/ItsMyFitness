@@ -19,9 +19,9 @@
     </fragment>
     <fragment
         android:id="@+id/helloFragment"
-        android:name="its.my.fitness.ru.presentation.screens.hello.HelloFragment"
+        android:name="its.my.fitness.ru.presentation.screens.hello.WelcomFragment"
         android:label="hello_fragment"
-        tools:layout="@layout/hello_fragment" >
+        tools:layout="@layout/welcom_fragment" >
         <action
             android:id="@+id/action_helloFragment_to_authFragment"
             app:destination="@id/authFragment" />
