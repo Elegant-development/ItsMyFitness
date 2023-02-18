@@ -1,10 +1,13 @@
 package its.my.fitness.ru.data
 
+import its.my.fitness.ru.data.nw.ThequesApi
 import its.my.fitness.ru.domain.SessionRepository
 import its.my.fitness.ru.domain.model.User
 import its.my.fitness.ru.domain.utils.ValidationResult
 
-class SessionRepositoryImpl: SessionRepository {
+class SessionRepositoryImpl(
+    private val gitHubApi: ThequesApi
+): SessionRepository {
 
     override suspend fun registration(user: User): ValidationResult {
         TODO("Not yet implemented")
