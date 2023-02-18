@@ -2,6 +2,7 @@ package its.my.fitness.ru.presentation.screens.splash
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import dagger.hilt.android.AndroidEntryPoint
 import its.my.fitness.ru.R
 import its.my.fitness.ru.databinding.SplashFragmentBinding
@@ -16,8 +17,15 @@ class SplashFragment: BaseFragment<SplashViewModel, SplashFragmentBinding>(R.lay
     override fun initBinding(
         inflater: LayoutInflater,
         container: ViewGroup?
-    ): SplashFragmentBinding {
-        TODO("Not yet implemented")
+    ): SplashFragmentBinding = SplashFragmentBinding.inflate(inflater)
+
+    override fun initialize() {
+        with(binding.content) {
+            alpha = 0f
+            animate().setDuration(1500).alpha(1f).withEndAction {
+                findNavController().navigate(R.id.action_splashFragment_to_welcomeFragment)
+            }
+        }
     }
 
 }
