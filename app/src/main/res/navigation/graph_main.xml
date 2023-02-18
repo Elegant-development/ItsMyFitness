@@ -23,11 +23,8 @@
         android:label="hello_fragment"
         tools:layout="@layout/welcome_fragment" >
         <action
-            android:id="@+id/action_helloFragment_to_authFragment"
-            app:destination="@id/authFragment" />
-        <action
-            android:id="@+id/action_helloFragment_to_registerFragment"
-            app:destination="@id/registerFragment" />
+            android:id="@+id/action_helloFragment_to_onboardingFragment"
+            app:destination="@id/onboardingFragment" />
     </fragment>
     <fragment
         android:id="@+id/mainFragment"
@@ -52,4 +49,9 @@
             android:id="@+id/action_registerFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/onboardingFragment"
+        android:name="its.my.fitness.ru.presentation.screens.onboarding.OnboardingFragment"
+        android:label="onboarding_fragment"
+        tools:layout="@layout/onboarding_fragment" />
 </navigation>
